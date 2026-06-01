@@ -1,0 +1,50 @@
+name: Bike Hunter
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"  # каждые 30 минут
+  workflow_dispatch:         # ручной запуск из GitHub UI
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Кэшируем зависимости
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Устанавливаем зависимости
+        run: pip install -r requirements.txt
+
+      - name: Восстанавливаем seen_listings.json
+        uses: actions/cache@v4
+        with:
+          path: seen_listings.json
+          key: seen-listings-${{ github.run_id }}
+          restore-keys: seen-listings-
+
+      - name: Восстанавливаем состояние обратной связи
+        uses: actions/cache@v4
+        with:
+          path: |
+            feedback.json
+            pending.json
+            telegram_offset.json
+          key: feedback-state-${{ github.run_id }}
+          restore-keys: feedback-state-
+
+      - name: Запускаем охоту
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py
