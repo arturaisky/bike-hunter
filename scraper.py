@@ -57,7 +57,11 @@ def _scrape_olx_details(url: str) -> dict:
 
 def _scrape_olx_page(base_url: str, page: int) -> list[dict]:
     url = base_url + f"&page={page}"
-    response = requests.get(url, headers=HEADERS, timeout=10)
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=15)
+    except Exception as e:
+        print(f"ошибка: {e}")
+        return []
     soup = BeautifulSoup(response.text, "html.parser")
 
     results = []
@@ -108,7 +112,7 @@ def _scrape_olx_all(max_pages: int = None) -> list[dict]:
                 break
 
             page += 1
-            time.sleep(1)
+            time.sleep(2)
 
     return all_listings, seen_links
 
@@ -239,6 +243,54 @@ def scrape_all_listings(max_pages: int = None) -> list[dict]:
     total = olx_listings + allegro_listings
     print(f"\nИтого: OLX {len(olx_listings)} + Allegro {len(allegro_listings)} = {len(total)} объявлений")
     return total
+
+
+def scrape_all_listings_iter(max_pages: int = None):
+    """Генератор: отдаёт объявления по одному для bootstrap."""
+    seen_links = set()
+    for base_url in OLX_URLS:
+        category = base_url.split("/rowery/")[1].split("/")[0]
+        print(f"\n[OLX] {category}")
+        page = 1
+        while True:
+            print(f"  Страница {page}...", end=" ", flush=True)
+            listings = _scrape_olx_page(base_url, page)
+            if not listings:
+                print("пусто.")
+                break
+            new = [l for l in listings if l["link"] not in seen_links]
+            for l in new:
+                seen_links.add(l["link"])
+                yield l
+            print(f"найдено {len(listings)}, новых {len(new)}")
+            if max_pages and page >= max_pages:
+                break
+            page += 1
+            time.sleep(2)
+
+    for base_url in ALLEGRO_URLS:
+        category = base_url.split("/rowery/")[1].split("/")[0]
+        print(f"\n[Allegro] {category}")
+        page = 1
+        while True:
+            print(f"  Страница {page}...", end=" ", flush=True)
+            try:
+                listings, total_pages = _scrape_allegro_page(base_url, page)
+            except Exception as e:
+                print(f"ошибка: {e}")
+                break
+            if not listings:
+                print("пусто.")
+                break
+            new = [l for l in listings if l["link"] not in seen_links]
+            for l in new:
+                seen_links.add(l["link"])
+                yield l
+            print(f"найдено {len(listings)}, новых {len(new)}")
+            if page >= total_pages:
+                break
+            page += 1
+            time.sleep(2)
 
 
 def scrape_all():
