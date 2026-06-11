@@ -115,18 +115,10 @@ def evaluate_listing(listing: dict) -> dict:
     Оценивает объявление через Claude API.
     Возвращает структурированный dict с verdict, priority_model, model_name, params.
     """
-    content = []
-
-    for photo_url in listing.get("photos", [])[:3]:
-        content.append({
-            "type": "image",
-            "source": {"type": "url", "url": photo_url},
-        })
-
     params_text = "\n".join(listing.get("params", [])) or "не указаны"
     description = (listing.get("description") or "нет описания")[:1500]
 
-    content.append({
+    content = [{
         "type": "text",
         "text": (
             f"Название: {listing.get('title', '—')}\n"
@@ -135,12 +127,12 @@ def evaluate_listing(listing: dict) -> dict:
             f"Параметры:\n{params_text}\n\n"
             f"Описание:\n{description}"
         ),
-    })
+    }]
 
     system_text = SYSTEM_PROMPT + fb.get_feedback_examples()
 
     response = client.messages.create(
-        model="claude-opus-4-7",
+        model="claude-sonnet-4-6",
         max_tokens=2048,
         system=[{
             "type": "text",
