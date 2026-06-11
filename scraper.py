@@ -4,15 +4,15 @@ import requests
 from bs4 import BeautifulSoup
 
 OLX_URLS = [
-    "https://www.olx.pl/sport-hobby/rowery/rowery-crossowe/warszawa/?search%5Bdist%5D=75&search%5Bfilter_float_price:from%5D=500&search%5Bfilter_float_price:to%5D=1500",
-    "https://www.olx.pl/sport-hobby/rowery/rowery-trekkingowe/warszawa/?search%5Bdist%5D=75&search%5Bfilter_float_price:from%5D=500&search%5Bfilter_float_price:to%5D=1500",
-    "https://www.olx.pl/sport-hobby/rowery/rowery-gravel/warszawa/?search%5Bdist%5D=75&search%5Bfilter_float_price:from%5D=500&search%5Bfilter_float_price:to%5D=1500",
+    "https://www.olx.pl/sport-hobby/rowery/rowery-crossowe/warszawa/?search%5Bdist%5D=75&search%5Bfilter_float_price:from%5D=500&search%5Bfilter_float_price:to%5D=1500&search%5Border%5D=created_at%3Adesc",
+    "https://www.olx.pl/sport-hobby/rowery/rowery-trekkingowe/warszawa/?search%5Bdist%5D=75&search%5Bfilter_float_price:from%5D=500&search%5Bfilter_float_price:to%5D=1500&search%5Border%5D=created_at%3Adesc",
+    "https://www.olx.pl/sport-hobby/rowery/rowery-gravel/warszawa/?search%5Bdist%5D=75&search%5Bfilter_float_price:from%5D=500&search%5Bfilter_float_price:to%5D=1500&search%5Border%5D=created_at%3Adesc",
 ]
 
 ALLEGRO_URLS = [
-    "https://allegrolokalnie.pl/oferty/rowery/crossowe-125055/warszawa?price_from=500&price_to=1500&odleglosc=75&zrodlo=allegro&zrodlo=lokalnie",
-    "https://allegrolokalnie.pl/oferty/rowery/trekkingowe-16485/warszawa?price_from=500&price_to=1500&odleglosc=75&zrodlo=allegro&zrodlo=lokalnie",
-    "https://allegrolokalnie.pl/oferty/rowery/przelajowe-gravel-254383/warszawa?price_from=500&price_to=1500&odleglosc=75&zrodlo=allegro&zrodlo=lokalnie",
+    "https://allegrolokalnie.pl/oferty/rowery/crossowe-125055/warszawa?price_from=500&price_to=1500&odleglosc=75&zrodlo=allegro&zrodlo=lokalnie&order=newest",
+    "https://allegrolokalnie.pl/oferty/rowery/trekkingowe-16485/warszawa?price_from=500&price_to=1500&odleglosc=75&zrodlo=allegro&zrodlo=lokalnie&order=newest",
+    "https://allegrolokalnie.pl/oferty/rowery/przelajowe-gravel-254383/warszawa?price_from=500&price_to=1500&odleglosc=75&zrodlo=allegro&zrodlo=lokalnie&order=newest",
 ]
 
 HEADERS = {
