@@ -11,7 +11,7 @@ import feedback
 
 TEST_MODE = "--test" in sys.argv
 BOOTSTRAP_MODE = "--bootstrap" in sys.argv
-MAX_EVALUATE = 25  # максимум оценок через Claude за один запуск
+MAX_EVALUATE = 500  # максимум оценок через Claude за один запуск
 
 
 def bootstrap():
