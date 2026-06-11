@@ -16,7 +16,7 @@ env/
 .env
 
 # State files (управляются кэшем GitHub Actions)
-seen_listings.json
+# seen_listings.json  # временно в git для seed кэша
 feedback.json
 pending.json
 telegram_offset.json

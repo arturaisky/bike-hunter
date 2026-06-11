@@ -11,7 +11,11 @@ import feedback
 
 TEST_MODE = "--test" in sys.argv
 BOOTSTRAP_MODE = "--bootstrap" in sys.argv
-MAX_EVALUATE = 500  # максимум оценок через Claude за один запуск
+MAX_EVALUATE = 25  # максимум оценок через Claude за один запуск
+
+# --pages N — ограничить количество страниц на категорию
+_pages_arg = next((sys.argv[i+1] for i, a in enumerate(sys.argv) if a == "--pages"), None)
+MAX_PAGES = int(_pages_arg) if _pages_arg else (1 if TEST_MODE else None)
 
 
 def bootstrap():
@@ -38,8 +42,9 @@ def run():
     seen = storage.load_seen()
     print(f"Уже видели: {len(seen)} объявлений")
 
-    print("Скрапим..." + (" (тест: 1 страница)" if TEST_MODE else ""))
-    all_listings = scraper.scrape_all_listings(max_pages=1 if TEST_MODE else None)
+    pages_label = f" (страниц: {MAX_PAGES})" if MAX_PAGES else ""
+    print(f"Скрапим...{pages_label}")
+    all_listings = scraper.scrape_all_listings(max_pages=MAX_PAGES)
 
     new_listings = [l for l in all_listings if storage.is_new(l["link"], seen)]
     print(f"Новых объявлений: {len(new_listings)}")
@@ -73,8 +78,13 @@ def run():
         evaluated += 1
 
         if verdict in ("ДА", "ВОЗМОЖНО"):
-            notifier.send_listing(listing, result)
-            good += 1
+            params = result.get("params", {})
+            unknowns = sum(1 for p in params.values() if p.get("match") == "❓")
+            if unknowns >= 7:
+                print("  → пропуск (слишком мало данных в объявлении)")
+            else:
+                notifier.send_listing(listing, result)
+                good += 1
 
         storage.mark_seen(listing["link"], seen)
         time.sleep(1)
