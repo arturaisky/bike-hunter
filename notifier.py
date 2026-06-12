@@ -104,7 +104,7 @@ def send_listing(listing: dict, result: dict) -> None:
     else:
         _send_message(text, markup)
 
-    fb.save_pending(lid, listing)
+    fb.save_pending(lid, listing, result)
 
 
 def _send_photo(photo_url: str, caption: str, markup: dict) -> None:

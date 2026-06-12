@@ -29,12 +29,15 @@ def _save(path, data) -> None:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-def save_pending(listing_id: str, listing: dict) -> None:
+def save_pending(listing_id: str, listing: dict, result: dict = None) -> None:
     pending = _load(PENDING_FILE, {})
     pending[listing_id] = {
         "link": listing.get("link", ""),
         "title": listing.get("title", ""),
         "price": listing.get("price", ""),
+        "photo": (listing.get("photos") or [None])[0],
+        "source": listing.get("source", ""),
+        "result": result or {},
     }
     _save(PENDING_FILE, pending)
 
@@ -75,6 +78,10 @@ def collect_feedback() -> int:
                 feedback_list.append({
                     "link": info.get("link", ""),
                     "title": info.get("title", ""),
+                    "price": info.get("price", ""),
+                    "photo": info.get("photo", ""),
+                    "source": info.get("source", ""),
+                    "result": info.get("result", {}),
                     "verdict": verdict,
                     "comment": "",
                     "timestamp": datetime.now().isoformat(),

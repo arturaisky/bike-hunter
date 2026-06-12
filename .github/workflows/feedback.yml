@@ -35,8 +35,19 @@ jobs:
           key: feedback-state-${{ github.run_id }}
           restore-keys: feedback-state-
 
-      - name: Собираем обратную связь
+      - name: Создаём google_credentials.json
+        run: echo '${{ secrets.GOOGLE_CREDENTIALS }}' > google_credentials.json
+
+      - name: Собираем обратную связь и обновляем таблицу
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python -c "from dotenv import load_dotenv; load_dotenv(); import feedback; n = feedback.collect_feedback(); print(f'Новых записей: {n}')"
+        run: |
+          python -c "
+          from dotenv import load_dotenv; load_dotenv()
+          import feedback, sheets
+          n = feedback.collect_feedback()
+          print(f'Новых записей: {n}')
+          if n:
+              sheets.sync()
+          "

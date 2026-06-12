@@ -2,3 +2,5 @@ requests
 beautifulsoup4
 anthropic
 python-dotenv
+gspread
+google-auth

@@ -14,6 +14,7 @@ env/
 
 # Environment variables (secrets!)
 .env
+google_credentials.json
 
 # State files (управляются кэшем GitHub Actions)
 # seen_listings.json  # временно в git для seed кэша
