@@ -23,7 +23,7 @@ PARAM_ORDER = [
 ]
 
 HEADERS = (
-    ["Дата", "Название", "Цена", "Источник", "Ссылка", "Фото"]
+    ["Дата", "Название", "Цена", "Модель", "Источник", "Ссылка", "Фото"]
     + [label for _, label in PARAM_ORDER]
     + ["Бонусы", "Дефекты", "Комментарий"]
 )
@@ -38,6 +38,31 @@ def _param_cell(params: dict, key: str) -> str:
     if comment:
         cell += f"\n({comment})"
     return cell
+
+
+def _build_entry_data(entry: dict) -> dict:
+    """Возвращает dict {название_столбца: значение} для одной записи."""
+    result = entry.get("result", {})
+    params = result.get("params", {})
+    photo = entry.get("photo", "")
+    model_name = result.get("model_name") or ""
+    priority = result.get("priority_model", False)
+
+    data = {
+        "Дата":       (entry.get("timestamp") or "")[:10],
+        "Название":   entry.get("title", "—"),
+        "Цена":       entry.get("price", "—"),
+        "Модель":     ("⭐ " if priority else "— ") + model_name if model_name else "",
+        "Источник":   entry.get("source", "—"),
+        "Ссылка":     entry.get("link", ""),
+        "Фото":       f'=IMAGE("{photo}")' if photo else "",
+        "Бонусы":     "; ".join(result.get("bonuses", [])),
+        "Дефекты":    "; ".join(result.get("defects", [])),
+        "Комментарий": entry.get("comment", ""),
+    }
+    for key, label in PARAM_ORDER:
+        data[label] = _param_cell(params, key)
+    return data
 
 
 def sync():
@@ -69,35 +94,47 @@ def sync():
         print("Нет одобренных объявлений для синхронизации.")
         return
 
-    rows = [HEADERS]
-    for entry in approved:
-        result = entry.get("result", {})
-        params = result.get("params", {})
+    # Читаем заголовки из таблицы
+    existing_headers = ws.row_values(1)
 
-        date = (entry.get("timestamp") or "")[:10]
-        title = entry.get("title", "—")
-        price = entry.get("price", "—")
-        source = entry.get("source", "—")
-        link = entry.get("link", "")
-        photo = entry.get("photo", "")
+    if not existing_headers:
+        # Первый запуск — пишем заголовки
+        ws.append_row(HEADERS, value_input_option="USER_ENTERED")
+        ws.format("A1:U1", {
+            "textFormat": {"bold": True},
+            "backgroundColor": {"red": 0.17, "green": 0.36, "blue": 0.63},
+        })
+        existing_headers = HEADERS
 
-        photo_cell = f'=IMAGE("{photo}")' if photo else ""
-        param_cells = [_param_cell(params, key) for key, _ in PARAM_ORDER]
-        bonuses = "; ".join(result.get("bonuses", []))
-        defects = "; ".join(result.get("defects", []))
-        comment = entry.get("comment", "")
+    # Карта: название столбца → индекс (0-based)
+    col_index = {name: i for i, name in enumerate(existing_headers)}
+    n_cols = len(existing_headers)
 
-        rows.append([date, title, price, source, link, photo_cell] + param_cells + [bonuses, defects, comment])
+    # Ссылки уже в таблице — чтобы не дублировать
+    link_col = col_index.get("Ссылка")
+    existing_links = set()
+    if link_col is not None:
+        all_rows = ws.get_all_values()
+        existing_links = {
+            row[link_col] for row in all_rows[1:]
+            if len(row) > link_col and row[link_col]
+        }
 
-    ws.clear()
-    ws.append_rows(rows, value_input_option="USER_ENTERED")
+    new_entries = [e for e in approved if e.get("link") not in existing_links]
+    if not new_entries:
+        print("Нет новых одобренных объявлений для добавления.")
+        return
 
-    ws.format("A1:T1", {
-        "textFormat": {"bold": True},
-        "backgroundColor": {"red": 0.17, "green": 0.36, "blue": 0.63},
-    })
+    new_rows = []
+    for entry in new_entries:
+        row = [""] * n_cols
+        for col_name, value in _build_entry_data(entry).items():
+            if col_name in col_index:
+                row[col_index[col_name]] = value
+        new_rows.append(row)
 
-    print(f"Таблица обновлена: {len(approved)} велосипедов → Google Sheets")
+    ws.append_rows(new_rows, value_input_option="USER_ENTERED")
+    print(f"Добавлено в таблицу: {len(new_rows)} велосипедов")
 
 
 if __name__ == "__main__":
