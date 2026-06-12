@@ -48,6 +48,5 @@ jobs:
           import feedback, sheets
           n = feedback.collect_feedback()
           print(f'Новых записей: {n}')
-          if n:
-              sheets.sync()
+          sheets.sync()
           "
