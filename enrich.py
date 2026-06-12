@@ -88,14 +88,6 @@ def enrich():
 
     if updated:
         print("Синхронизируем с Google Sheets...")
-        # Очищаем таблицу и перезаписываем заново чтобы обновить уже существующие строки
-        import gspread, os
-        creds_file = "google_credentials.json"
-        if os.path.exists(creds_file):
-            gc = gspread.service_account(filename=creds_file)
-            sh = gc.open_by_key(sheets.SPREADSHEET_ID)
-            ws = sh.sheet1
-            ws.clear()
         sheets.sync()
 
 

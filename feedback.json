@@ -1,0 +1,627 @@
+[
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-crossowy-winora-dakar-28-aluminiowa-rama-19-CID767-ID17RKdc.html?search_reason=search%7Cpromoted",
+    "title": "Rower crossowy Winora Dakar – 28”, aluminiowa rama (19”)",
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-01T08:10:12.212029",
+    "result": {
+      "verdict": "НЕТ",
+      "priority_model": false,
+      "model_name": "Winora Dakar",
+      "params": {
+        "budget": {
+          "value": "1500 zł",
+          "match": "❌",
+          "comment": "Выше бюджета, даже с торгом"
+        },
+        "color": {
+          "value": "чёрный",
+          "match": "✅",
+          "comment": ""
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Кросс-байк, стандартный flat bar"
+        },
+        "posture": {
+          "value": "прямая",
+          "match": "✅",
+          "comment": ""
+        },
+        "frame_size": {
+          "value": "19\" / M",
+          "match": "⚠️",
+          "comment": "19\" — верхняя граница M, для роста 173 см немного велика"
+        },
+        "wheels": {
+          "value": "28\"",
+          "match": "✅",
+          "comment": ""
+        },
+        "tires": {
+          "value": "❓",
+          "match": "❓",
+          "comment": "Ширина покрышек не указана"
+        },
+        "gears": {
+          "value": "Shimano 3×8",
+          "match": "⚠️",
+          "comment": "Уровень группы не указан, предположительно Tourney/Altus"
+        },
+        "brakes": {
+          "value": "тарезы механические",
+          "match": "✅",
+          "comment": "В объявлении указано механика, в параметрах — гидравлика; несоответствие"
+        },
+        "suspension": {
+          "value": "амортизированная вилка + амортизированный подседельный штырь",
+          "match": "❌",
+          "comment": "Двойная амортизация — явный минус"
+        }
+      },
+      "bonuses": [],
+      "defects": []
+    },
+    "price": "",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/070h30558clr2-PL/image;s=4000x3000",
+    "source": ""
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-pegasus-premio-sl-CID767-ID1a7dw4.html?search_reason=search%7Cpromoted",
+    "title": "Rower Pegasus Premio SL",
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-01T08:18:09.808472"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-romet-orkan-2m-28-stan-bardzo-dobry-CID767-ID1aNhVh.html?search_reason=search%7Corganic",
+    "title": "Rower Romet Orkan 2M 28’ stan bardzo dobry",
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-01T09:19:46.643147"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/kross-evado-7-0-rama-m-osprzet-deore-CID767-ID1aOplt.html?search_reason=search%7Cpromoted",
+    "title": "Kross Evado 7.0  rama M osprzęt Deore",
+    "price": "1 400 złdo negocjacji",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/t3yqs33hpxcd2-PL/image;s=1195x896",
+    "source": "",
+    "result": {
+      "verdict": "ВОЗМОЖНО",
+      "priority_model": true,
+      "model_name": "Kross Evado 7.0",
+      "params": {
+        "budget": {
+          "value": "1400 zł (до переговоров)",
+          "match": "⚠️",
+          "comment": "Выше бюджета, но продавец указывает на торг и зависимость цены от комплектации"
+        },
+        "color": {
+          "value": "чёрный",
+          "match": "✅",
+          "comment": ""
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Kross Evado — кросс-байк с flat bar"
+        },
+        "posture": {
+          "value": "прямая/умеренно прямая",
+          "match": "✅",
+          "comment": ""
+        },
+        "frame_size": {
+          "value": "M / 17-18\"",
+          "match": "✅",
+          "comment": ""
+        },
+        "wheels": {
+          "value": "28\"",
+          "match": "✅",
+          "comment": ""
+        },
+        "tires": {
+          "value": "❓",
+          "match": "❓",
+          "comment": "Не указано, но Kross Evado 7.0 штатно идёт с покрышками ~40 мм"
+        },
+        "gears": {
+          "value": "Shimano Deore 3x10",
+          "match": "✅",
+          "comment": "Выше приоритетного уровня — это плюс"
+        },
+        "brakes": {
+          "value": "гидравлические дисковые Shimano",
+          "match": "✅",
+          "comment": ""
+        },
+        "suspension": {
+          "value": "вилка с амортизатором",
+          "match": "⚠️",
+          "comment": "Есть передняя амортизация — минус по критериям"
+        }
+      },
+      "bonuses": [
+        "подножка",
+        "крылья",
+        "держатели для фляг 2x",
+        "велокомпьютер"
+      ],
+      "defects": [
+        "царапины и сколы краски (нормальный износ)",
+        "сумка, фонари, подседельная сумка и фляги — только при достижении нужной цены"
+      ]
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T16:16:02.801649"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-kross-evado-1-0-prawie-nowy-CID767-ID1aWGAn.html?search_reason=search%7Cpromoted",
+    "title": "Rower KROSS Evado 1.0 prawie nowy",
+    "price": "1 300 zł",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/golo5ybmd61a3-PL/image;s=768x1024",
+    "source": "",
+    "result": {
+      "verdict": "ВОЗМОЖНО",
+      "priority_model": true,
+      "model_name": "Kross Evado 1.0",
+      "params": {
+        "budget": {
+          "value": "1300 zł",
+          "match": "✅",
+          "comment": "Верхняя граница бюджета"
+        },
+        "color": {
+          "value": "графитовый",
+          "match": "✅",
+          "comment": "Тёмный цвет"
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Kross Evado 1.0 — плоский руль по умолчанию"
+        },
+        "posture": {
+          "value": "прямая",
+          "match": "✅",
+          "comment": ""
+        },
+        "frame_size": {
+          "value": "❓",
+          "match": "❓",
+          "comment": "Размер рамы не указан — нужно уточнить"
+        },
+        "wheels": {
+          "value": "28\" / 700c",
+          "match": "✅",
+          "comment": "Kross Evado 1.0 — 28\" по спецификации"
+        },
+        "tires": {
+          "value": "~40 мм",
+          "match": "✅",
+          "comment": "Стандартная покрышка Evado — около 40 мм"
+        },
+        "gears": {
+          "value": "Shimano Tourney",
+          "match": "⚠️",
+          "comment": "Evado 1.0 — начальный уровень Tourney, не Altus/Acera"
+        },
+        "brakes": {
+          "value": "V-brake",
+          "match": "✅",
+          "comment": "Evado 1.0 оснащён V-brake"
+        },
+        "suspension": {
+          "value": "передняя вилка",
+          "match": "⚠️",
+          "comment": "Амортизатор спереди — минус по критериям"
+        }
+      },
+      "bonuses": [
+        "крылья",
+        "багажник"
+      ],
+      "defects": [
+        "продаётся без детского кресла (упомянуто для информации)"
+      ]
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T16:20:49.009289"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-kross-evado-1-0-prawie-nowy-CID767-ID1aWGAn.html?search_reason=search%7Cpromoted",
+    "title": "Rower KROSS Evado 1.0 prawie nowy",
+    "price": "1 300 zł",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/golo5ybmd61a3-PL/image;s=768x1024",
+    "source": "",
+    "result": {
+      "verdict": "ВОЗМОЖНО",
+      "priority_model": true,
+      "model_name": "Kross Evado 1.0",
+      "params": {
+        "budget": {
+          "value": "1300 zł",
+          "match": "✅",
+          "comment": "Верхняя граница бюджета"
+        },
+        "color": {
+          "value": "графитовый",
+          "match": "✅",
+          "comment": "Тёмный цвет"
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Kross Evado — flat bar по умолчанию"
+        },
+        "posture": {
+          "value": "прямая",
+          "match": "✅",
+          "comment": "Трекинговая геометрия"
+        },
+        "frame_size": {
+          "value": "❓",
+          "match": "❓",
+          "comment": "Размер рамы не указан — нужно уточнить"
+        },
+        "wheels": {
+          "value": "28\" / 700c",
+          "match": "✅",
+          "comment": "Kross Evado 1.0 — 28\" по умолчанию"
+        },
+        "tires": {
+          "value": "~40 мм",
+          "match": "✅",
+          "comment": "Kross Evado 1.0 штатно идёт с покрышками ~40 мм"
+        },
+        "gears": {
+          "value": "Shimano Tourney",
+          "match": "⚠️",
+          "comment": "Evado 1.0 — начальный уровень Tourney, не Acera/Altus"
+        },
+        "brakes": {
+          "value": "V-brake",
+          "match": "✅",
+          "comment": "Evado 1.0 стандартно оснащён V-brake"
+        },
+        "suspension": {
+          "value": "есть (перед)",
+          "match": "⚠️",
+          "comment": "Амортизационная вилка — минус по критериям покупателя"
+        }
+      },
+      "bonuses": [
+        "крылья",
+        "багажник"
+      ],
+      "defects": [
+        "продаётся без детского кресла"
+      ]
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T16:20:49.412560"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-trekkingowy-kross-trans-1-0-roz-m-19-shimano-tourney-kola-28-CID767-ID197Oa5.html?search_reason=search%7Corganic",
+    "title": "Rower Trekkingowy KROSS TRANS 1.0 Roz. M 19\" Shimano Tourney *Koła 28*",
+    "price": "1 299 zł",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/z7fqmaoito5w-PL/image;s=1280x960",
+    "source": "",
+    "result": {
+      "verdict": "ВОЗМОЖНО",
+      "priority_model": true,
+      "model_name": "Kross Trans 1.0 M 19\"",
+      "params": {
+        "budget": {
+          "value": "1299 zł",
+          "match": "⚠️",
+          "comment": "На верхней границе бюджета"
+        },
+        "color": {
+          "value": "чёрный",
+          "match": "✅",
+          "comment": ""
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Трекинговый руль, посадка прямая"
+        },
+        "posture": {
+          "value": "прямая",
+          "match": "✅",
+          "comment": ""
+        },
+        "frame_size": {
+          "value": "M / 19\"",
+          "match": "⚠️",
+          "comment": "19\" — верхняя граница M, для роста 173 см немного великовато"
+        },
+        "wheels": {
+          "value": "28\" / 700c",
+          "match": "✅",
+          "comment": ""
+        },
+        "tires": {
+          "value": "❓",
+          "match": "❓",
+          "comment": "Ширина покрышек не указана, нужно уточнять"
+        },
+        "gears": {
+          "value": "Shimano Tourney",
+          "match": "⚠️",
+          "comment": "Tourney — начальный уровень, ниже Altus/Acera"
+        },
+        "brakes": {
+          "value": "V-brake",
+          "match": "✅",
+          "comment": ""
+        },
+        "suspension": {
+          "value": "вилка спереди",
+          "match": "⚠️",
+          "comment": "Амортизационная вилка KROSS ZOOM — минус по критериям"
+        }
+      },
+      "bonuses": [],
+      "defects": []
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T16:25:02.195023"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-crosowy-carrera-crossfire-ii-28-kolo-rama-m-CID767-ID1b0U2d.html?search_reason=search%7Corganic",
+    "title": "Rower crosowy Carrera Crossfire II 28 kolo rama M",
+    "price": "1 199 zł",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T16:38:24.117265"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-lazaro-integral-v-szary-mat-19-CID767-ID1a14lb.html?search_reason=search%7Corganic",
+    "title": "Rower LAZARO INTEGRAL V  szary mat 19\"",
+    "price": "800 złdo negocjacji",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T16:38:24.481580"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/kellys-phutura-30-m-alivio-acera-hydraulika-cross-CID767-ID1azMyC.html?search_reason=search%7Corganic",
+    "title": "Kellys Phutura 30 M Alivio Acera Hydraulika Cross",
+    "price": "1 300 złdo negocjacji",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T16:38:24.864182"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-cross-lea-r4-CID767-IDV5Iua.html?search_reason=search%7Corganic",
+    "title": "Rower cross LEA R4",
+    "price": "1 200 złdo negocjacji",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T16:38:25.241926"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/trek-dual-sport-8-4-ds-CID767-ID1aZQcM.html?search_reason=search%7Corganic",
+    "title": "Trek Dual Sport 8.4 DS",
+    "price": "1 300 zł",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/q0w63gk046fv2-PL/image;s=1984x1488",
+    "source": "",
+    "result": {
+      "verdict": "ДА",
+      "priority_model": true,
+      "model_name": "Trek Dual Sport 8.4 DS",
+      "params": {
+        "budget": {
+          "value": "1300 zł",
+          "match": "✅",
+          "comment": ""
+        },
+        "color": {
+          "value": "чёрный",
+          "match": "✅",
+          "comment": ""
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Trek Dual Sport — flat bar по умолчанию"
+        },
+        "posture": {
+          "value": "прямая",
+          "match": "✅",
+          "comment": ""
+        },
+        "frame_size": {
+          "value": "17,5\" / M",
+          "match": "✅",
+          "comment": ""
+        },
+        "wheels": {
+          "value": "28\" / 700c",
+          "match": "✅",
+          "comment": ""
+        },
+        "tires": {
+          "value": "❓",
+          "match": "❓",
+          "comment": "Не указано, но модель обычно идёт с 40–45 мм покрышками"
+        },
+        "gears": {
+          "value": "Shimano Alivio",
+          "match": "✅",
+          "comment": ""
+        },
+        "brakes": {
+          "value": "диски гидравлические",
+          "match": "✅",
+          "comment": ""
+        },
+        "suspension": {
+          "value": "вилка с блокировкой",
+          "match": "⚠️",
+          "comment": "Амортизатор спереди — минус, но есть блокировка"
+        }
+      },
+      "bonuses": [
+        "кошик для фляги Bontrager",
+        "счётчик Trek",
+        "подножка",
+        "багажник",
+        "документы на велосипед"
+      ],
+      "defects": []
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T16:38:25.618689"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/kellys-stylus-28-rama-19-rozmiar-m-CID767-ID1aZPiC.html?search_reason=search%7Corganic",
+    "title": "Kellys Stylus 28\"  /Rama 19\" (Rozmiar M)",
+    "price": "800 złdo negocjacji",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T16:38:26.021117"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-romet-orkan-3-m-gratis-zapiecie-sakwa-uchwyt-na-telefon-CID767-ID1atEiT.html?search_reason=search%7Corganic",
+    "title": "Rower Romet Orkan 3 M + GRATIS zapięcie, sakwa, uchwyt na telefon",
+    "price": "1 200 złdo negocjacji",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/lrqax3pa3gi13-PL/image;s=4032x3024",
+    "source": "",
+    "result": {
+      "verdict": "ДА",
+      "priority_model": false,
+      "model_name": "Romet Orkan 3 M",
+      "params": {
+        "budget": {
+          "value": "1200 zł",
+          "match": "✅",
+          "comment": ""
+        },
+        "color": {
+          "value": "чёрный",
+          "match": "✅",
+          "comment": ""
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Кросс/трекинг-велосипед, прямой руль по умолчанию"
+        },
+        "posture": {
+          "value": "прямая / умеренно прямая",
+          "match": "✅",
+          "comment": ""
+        },
+        "frame_size": {
+          "value": "M / 18\"",
+          "match": "✅",
+          "comment": ""
+        },
+        "wheels": {
+          "value": "28\" / 700c",
+          "match": "✅",
+          "comment": ""
+        },
+        "tires": {
+          "value": "Continental Ride Tour 28x1.6 (~40 мм)",
+          "match": "✅",
+          "comment": "Туринговая покрышка, не слик и не зубастая"
+        },
+        "gears": {
+          "value": "Shimano Tourney / Deore",
+          "match": "⚠️",
+          "comment": "Tourney — начальный уровень, Deore сзади — неожиданно хорошо для этой модели, стоит уточнить"
+        },
+        "brakes": {
+          "value": "Диски механические Shimano Tourney BR-TX805",
+          "match": "✅",
+          "comment": ""
+        },
+        "suspension": {
+          "value": "SR Suntour вилка спереди",
+          "match": "⚠️",
+          "comment": "Амортизационная вилка — минус по критериям, но не отказ"
+        }
+      },
+      "bonuses": [
+        "замок складной Kross",
+        "большая треугольная сумка под раму",
+        "держатель телефона GUB G-85",
+        "фонари"
+      ],
+      "defects": []
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T16:38:26.374046"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/trek-dualsport-8-4-2013r-CID767-ID1as58Q.html?search_reason=search%7Corganic",
+    "title": "Trek Dualsport 8.4 2013r",
+    "price": "850 zł",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T17:02:44.562136"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-trekingowy-kellys-axis-21-CID767-ID1aTa5Q.html?search_reason=search%7Corganic",
+    "title": "Rower trekingowy Kelly's Axis 21\"",
+    "price": "950 złdo negocjacji",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T17:02:44.934150"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/sprzedam-rower-trekkingowy-kalkhoff-CID767-ID16SKFN.html?search_reason=search%7Corganic",
+    "title": "Sprzedam rower trekkingowy Kalkhoff",
+    "price": "900 zł",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T17:02:45.471560"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/prophete-comfort-trekking-28-shimano-24-biegi-gotowy-do-jazdy-CID767-ID1aSDXP.html?search_reason=search%7Corganic",
+    "title": "Prophete Comfort Trekking 28” – Shimano 24 biegi – gotowy do jazdy",
+    "price": "600 zł",
+    "photo": "",
+    "source": "",
+    "result": {},
+    "verdict": "НЕТ",
+    "comment": "",
+    "timestamp": "2026-06-12T17:02:45.919927"
+  }
+]
