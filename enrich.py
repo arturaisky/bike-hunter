@@ -52,10 +52,28 @@ def enrich():
             print(f"  → ошибка скрапинга: {e}")
             continue
 
+        # Если название не известно — берём из страницы объявления
+        title_known = entry.get("title", "")
+        if not title_known:
+            try:
+                import requests
+                from bs4 import BeautifulSoup
+                resp = requests.get(link, headers=scraper.HEADERS, timeout=15)
+                soup = BeautifulSoup(resp.text, "html.parser")
+                h = soup.find("h4") or soup.find("h1")
+                if h:
+                    title_known = h.get_text(strip=True)
+                price_tag = soup.find("div", class_="css-90xrc0") or soup.find("p", attrs={"data-testid": "ad-price"})
+                price_known = price_tag.get_text(strip=True) if price_tag else entry.get("price", "")
+            except Exception:
+                price_known = entry.get("price", "")
+        else:
+            price_known = entry.get("price", "")
+
         listing = {
             "link": link,
-            "title": entry.get("title", ""),
-            "price": entry.get("price", ""),
+            "title": title_known,
+            "price": price_known,
             "source": entry.get("source", ""),
             **details,
         }
@@ -70,7 +88,8 @@ def enrich():
         for fb_entry in feedback_list:
             if fb_entry.get("link") == link and not fb_entry.get("result", {}).get("params"):
                 fb_entry["result"] = result
-                fb_entry["price"] = fb_entry.get("price") or listing.get("price", "")
+                fb_entry["title"] = fb_entry.get("title") or title_known
+                fb_entry["price"] = fb_entry.get("price") or price_known
                 fb_entry["photo"] = (details.get("photos") or [None])[0] or ""
                 fb_entry["source"] = fb_entry.get("source") or listing.get("source", "")
                 break

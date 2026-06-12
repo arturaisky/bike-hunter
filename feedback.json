@@ -623,5 +623,224 @@
     "verdict": "НЕТ",
     "comment": "",
     "timestamp": "2026-06-12T17:02:45.919927"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-crossowy-kross-evado-2-0-kola-28-nowy-CID767-IDIMzPi.html?search_reason=search%7Corganic",
+    "title": "Rower crossowy Kross Evado 2.0 koła 28\" nowy",
+    "price": "",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/63om45sf2q8x2-PL/image;s=767x590",
+    "source": "olx",
+    "result": {
+      "verdict": "ДА",
+      "priority_model": true,
+      "model_name": "Kross Evado 2.0 (2022/2023)",
+      "params": {
+        "budget": {
+          "value": "не указана",
+          "match": "❓",
+          "comment": "Цена не указана — нужно уточнить"
+        },
+        "color": {
+          "value": "чёрный/зелёный или чёрный/синий или чёрный/мятный",
+          "match": "✅",
+          "comment": "Все варианты на чёрной основе"
+        },
+        "handlebar": {
+          "value": "прямой руль 640 мм",
+          "match": "✅",
+          "comment": ""
+        },
+        "posture": {
+          "value": "прямая / умеренно прямая",
+          "match": "✅",
+          "comment": "Кросс-гибрид с flat bar"
+        },
+        "frame_size": {
+          "value": "M (168–180 см)",
+          "match": "✅",
+          "comment": "Рост покупателя 173 см — попадает в диапазон"
+        },
+        "wheels": {
+          "value": "28\" / 700c",
+          "match": "✅",
+          "comment": ""
+        },
+        "tires": {
+          "value": "Mitas Gripper V84",
+          "match": "✅",
+          "comment": "Полуслик для кросс/треккинга, ширина ~40 мм"
+        },
+        "gears": {
+          "value": "Shimano Altus (3x7)",
+          "match": "✅",
+          "comment": "Задняя перекидка Altus, передняя Tourney"
+        },
+        "brakes": {
+          "value": "V-brake",
+          "match": "✅",
+          "comment": ""
+        },
+        "suspension": {
+          "value": "SR Suntour 3010",
+          "match": "⚠️",
+          "comment": "Есть амортизационная вилка — минус, но не критично"
+        }
+      },
+      "bonuses": [
+        "гарантия",
+        "документ продажи (счёт-фактура или чек)"
+      ],
+      "defects": []
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T17:38:46.064377"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/roczny-jak-nowy-rower-cross-evado-licznik-rowerowy-oswietlenie-bagaznika-blotniki-wszystko-z-crossa-CID767-ID1aYeVE.html?search_reason=search%7Corganic",
+    "title": "Roczny jak nowy Kross Evado + licznik, oświetlenie, bagażnik, błotniki",
+    "price": "",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/b816thazave5-PL/image;s=1024x461",
+    "source": "olx",
+    "result": {
+      "verdict": "ВОЗМОЖНО",
+      "priority_model": true,
+      "model_name": "Kross Evado",
+      "params": {
+        "budget": {
+          "value": "не указана",
+          "match": "❓",
+          "comment": "Цена не указана в объявлении"
+        },
+        "color": {
+          "value": "чёрный",
+          "match": "✅",
+          "comment": ""
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Kross Evado — кросс с flat bar по умолчанию"
+        },
+        "posture": {
+          "value": "прямая",
+          "match": "✅",
+          "comment": "Типичная посадка для Kross Evado"
+        },
+        "frame_size": {
+          "value": "19–20\" (указано)",
+          "match": "⚠️",
+          "comment": "В параметрах 19–20\", но продавец пишет 'rozmiar M' и 'mam 178 i jest idealny' — для Kross Evado 19\" соответствует размеру L, уточнить"
+        },
+        "wheels": {
+          "value": "28\"",
+          "match": "✅",
+          "comment": ""
+        },
+        "tires": {
+          "value": "❓",
+          "match": "❓",
+          "comment": "Ширина покрышек не указана, для Kross Evado обычно 40–42 мм"
+        },
+        "gears": {
+          "value": "❓",
+          "match": "❓",
+          "comment": "Модель Evado не уточнена, уровень трансмиссии неизвестен"
+        },
+        "brakes": {
+          "value": "V-brake",
+          "match": "✅",
+          "comment": ""
+        },
+        "suspension": {
+          "value": "передняя вилка",
+          "match": "⚠️",
+          "comment": "Амортизация спереди — минус по критериям покупателя"
+        }
+      },
+      "bonuses": [
+        "багажник",
+        "освещение",
+        "крылья",
+        "велокомпьютер"
+      ],
+      "defects": []
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T17:38:46.064528"
+  },
+  {
+    "link": "https://www.olx.pl/d/oferta/rower-kross-evado-1-0-s-17-CID767-ID1aVMjs.html?search_reason=search%7Corganic",
+    "title": "Rower Kross Evado 1.0 S/17\"",
+    "price": "",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/do3kh684uosy1-PL/image;s=1126x2000",
+    "source": "olx",
+    "result": {
+      "verdict": "ВОЗМОЖНО",
+      "priority_model": true,
+      "model_name": "Kross Evado 1.0",
+      "params": {
+        "budget": {
+          "value": "не указана",
+          "match": "❓",
+          "comment": "Цена не указана в объявлении"
+        },
+        "color": {
+          "value": "чёрный",
+          "match": "✅",
+          "comment": ""
+        },
+        "handlebar": {
+          "value": "прямой руль",
+          "match": "✅",
+          "comment": "Kross Evado 1.0 — стандартный flat bar"
+        },
+        "posture": {
+          "value": "прямая/умеренная",
+          "match": "✅",
+          "comment": "Типичная для трекинговой посадки Evado"
+        },
+        "frame_size": {
+          "value": "17\" / S",
+          "match": "⚠️",
+          "comment": "Указано 17\" — нижняя граница M, но в параметрах написано 17-18\"; для роста 173 см подойдёт, уточнить"
+        },
+        "wheels": {
+          "value": "28\" / 700c",
+          "match": "✅",
+          "comment": "Kross Evado 1.0 — стандартно 700c"
+        },
+        "tires": {
+          "value": "~40 мм",
+          "match": "✅",
+          "comment": "Evado 1.0 комплектуется покрышками 700x40c"
+        },
+        "gears": {
+          "value": "Shimano Tourney",
+          "match": "⚠️",
+          "comment": "Evado 1.0 — начальный уровень Tourney, не Acera/Alivio"
+        },
+        "brakes": {
+          "value": "V-brake (szczękowe)",
+          "match": "✅",
+          "comment": ""
+        },
+        "suspension": {
+          "value": "передняя вилка",
+          "match": "⚠️",
+          "comment": "Амортизированная вилка спереди — минус по критериям"
+        }
+      },
+      "bonuses": [
+        "звонок",
+        "подножка",
+        "световозвращатели"
+      ],
+      "defects": []
+    },
+    "verdict": "ДА",
+    "comment": "",
+    "timestamp": "2026-06-12T17:38:46.064530"
   }
 ]
